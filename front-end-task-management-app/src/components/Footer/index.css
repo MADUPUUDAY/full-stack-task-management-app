@@ -1,0 +1,128 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 20px;
+  width: 100%;
+  
+  margin-top: 50px;
+  justify-content: space-between;
+  background-color: #f6f5f8; 
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.footer-section h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.aishaala .about-us {
+  color: gray;
+  margin-top: 10px;
+}
+
+.office p {
+  margin-bottom: 10px;
+}
+
+.quick-links p {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.legal-stuff p {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    flex-direction: row; 
+  }
+
+  .footer-section {
+    flex: none; 
+    margin-bottom: 20px; 
+  }
+  .office{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px 10px; 
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .footer-section h2 {
+    font-size: 1.25rem; 
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem; 
+  }
+
+  .aishaala .about-us {
+    font-size: 0.85rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 20px 10px; 
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    text-align: left;
+  }
+  .office{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-section h2 {
+    font-size: 1.1rem; 
+  }
+
+  .footer-section p {
+    font-size: 0.85rem; 
+  }
+
+  .aishaala .about-us {
+    font-size: 0.75rem; 
+  }
+  .footer-section{
+    justify-content: flex-start;
+    align-items: start;
+    text-align: left;
+
+  }
+}
+.links {
+  text-decoration: none !important;
+  cursor: pointer;
+  color: black;
+}
+
+.links:hover,
+.links:focus {
+  text-decoration: none !important;
+
+}

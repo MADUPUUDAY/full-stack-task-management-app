@@ -1,0 +1,452 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Task List */
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #e1f5fe;
+  transform: scale(1.02);
+}
+
+.task-item h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.task-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Add Task Button */
+button.add-task {
+  background-color: #28a745;
+  margin: 10px 0;
+  width: 100%;
+}
+
+button.add-task:hover {
+  background-color: #218838;
+}
+
+/* Task Form Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.modal.show form {
+  transform: translateY(0);
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal textarea {
+  height: 80px;
+}
+
+.modal button[type="submit"],
+.modal button[type="button"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button[type="submit"]:hover,
+.modal button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+.modal button[type="submit"]:active,
+.modal button[type="button"]:active {
+  transform: scale(0.98);
+}
+
+/* Select Dropdown */
+select {
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Transition for Filters */
+select {
+  transition: background-color 0.3s ease;
+}
+
+select:hover {
+  background-color: #e9ecef;
+}
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+button {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Task Card */
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-text small {
+  font-size: 12px;
+  color: #999;
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: right;
+}
+
+/* Task Status Colors */
+.card.pending {
+  border-left: 5px solid #ffcc00;
+}
+
+.card.in-progress {
+  border-left: 5px solid #17a2b8;
+}
+
+.card.completed {
+  border-left: 5px solid #28a745;
+}
+
+/* Task Add Button */
+button.mb-5 {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.mb-5:hover {
+  background-color: #0056b3;
+}
+
+button.mb-5:active {
+  background-color: #003366;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* Form Inputs */
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Dropdown */
+.dropdown-toggle {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Task Form Submit Button */
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+button[type="submit"]:active {
+  background-color: #1e7e34;
+}
+
+/* Cancel Button */
+button[type="button"] {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: #e2e6ea;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Add Task Form Animations */
+.form-control,
+button[type="submit"],
+button[type="button"] {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Transition for Button Click */
+button {
+  transition: transform 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  button.mb-5 {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,111 @@
+/* Header Styles */
+.header {
+  height: 60px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(211, 211, 211, 0.2);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: backdrop-filter 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.left-options, .right-options {
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding-right: 25px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.option, .option1 {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.signin-button, .logout-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signin-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.logout-button {
+  background-color: #ea6a2f;
+  color: white;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.logo1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(252, 118, 118);
+  text-decoration: none;
+}
